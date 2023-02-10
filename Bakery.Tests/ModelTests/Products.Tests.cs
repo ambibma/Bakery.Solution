@@ -62,7 +62,7 @@ namespace Bakery.Tests
   [TestClass]
     public class PastryTests
     {
-      [TestMethod]
+    [TestMethod]
       public void PastryConstructor_CreateInstanceOfPastry_Pastry()
     {
       Pastry newPastry = new Pastry(1);
@@ -85,6 +85,14 @@ namespace Bakery.Tests
       int freePastry = newPastry.Quantity/4;
       int result = newPastry.FreePastry;
       Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void DisplayFreePastry_DisplaysFreePastry_StringDescription()
+    {
+      int quantity = 4;
+      Pastry newPastry = new Pastry(quantity);
+      string result = newPastry.DisplayFreePastries();
+      Assert.AreEqual($"Free Pastries: {newPastry.FreePastry} Pastry!", result);
     }
     
   }

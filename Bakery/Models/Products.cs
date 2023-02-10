@@ -46,6 +46,11 @@ namespace Bakery.Models
       _price = _price * (quantity - FreePastry);
     }
 
+    public string DisplayFreePastries()
+    {
+      return "";
+    }
+
   }
 
   
