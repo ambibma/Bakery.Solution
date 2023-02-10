@@ -48,7 +48,7 @@ namespace Bakery.Models
 
     public string DisplayFreePastries()
     {
-      return "";
+      return $"Free Pastries: {this.FreePastry} Pastry!";
     }
 
   }
