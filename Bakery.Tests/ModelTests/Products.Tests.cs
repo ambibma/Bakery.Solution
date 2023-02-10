@@ -46,7 +46,16 @@ namespace Bakery.Tests
       int quantity = 3;
       Bread newBread = new Bread(quantity);
       string result = newBread.DisplayFreeBread();
-      Assert.AreEqual($"Free Bread: {newBread.FreeBread}:", result);
+      Assert.AreEqual($"Free Bread: {newBread.FreeBread} Loaf!", result);
+    }
+    [TestMethod]
+
+    public void DisplayFreeBreads_ShowsFreeBreadLoaves_StringDescription()
+    {
+      int quantity = 6;
+      Bread newBread = new Bread(quantity);
+      string result = newBread.DisplayFreeBread();
+      Assert.AreEqual($"Free Bread: {newBread.FreeBread} Loaves!", result);
     }
   } 
   

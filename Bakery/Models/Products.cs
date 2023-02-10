@@ -18,19 +18,21 @@ namespace Bakery.Models
 
     public string DisplayFreeBread()
     {
-        return $"Free Bread: {this.FreeBread}:";
-      // {
-      // if (this.FreeBread != 0)
-      // }
-      // else
-      // {
-      //   return "";
-      // }
-      // else (this.FreeBread)
-    }
+      
+      if (this.FreeBread == 0)
+      {
+        return "";
 
-  
-    
+      }
+      if (this.FreeBread == 1)
+      {
+        return $"Free Bread: {this.FreeBread} Loaf!";
+      }
+      else
+      {
+        return "";
+      }
+    }
   }
   public class Pastry
   {
@@ -47,10 +49,10 @@ namespace Bakery.Models
 
   }
 
+  
+}
   // public class Order
   // {
 
   // }
 
-
-}
