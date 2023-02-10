@@ -107,7 +107,7 @@ namespace Bakery.Tests
       string result = newPastry.DisplayFreePastries();
       Assert.AreEqual($"Free Pastries: {newPastry.FreePastries} Pastries!", result);
     }
-
+  
     
   }
 }
