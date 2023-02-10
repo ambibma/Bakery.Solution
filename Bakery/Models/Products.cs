@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 // using System.Linq;
 
@@ -9,7 +10,7 @@ namespace Bakery.Models
     private int _price = 5;
     public int FreeBread = 0;
 
-   public Bread(int quantity)
+    public Bread(int quantity)
     {
       Quantity = quantity;
       FreeBread = quantity/3;
@@ -20,7 +21,7 @@ namespace Bakery.Models
     {      
       if (this.FreeBread == 0)
       {
-        return "You did not qualify for any free loaves, come back nex time!";
+        return "You did not qualify for any free loaves, come back next time!";
 
       }
       if (this.FreeBread == 1)
@@ -34,29 +35,32 @@ namespace Bakery.Models
     }
     public int ShowBreadCost()
     {
-      return _price;
+      return this._price;
     }
   }
   public class Pastry
   {
     public int Quantity {get; set;}
-    private static int _price = 2;
+    private int _pastryCost = 2;
     public int FreePastries= 0;
 
     public Pastry(int quantity)
     {
       Quantity = quantity;
       FreePastries = quantity/4;
-      _price = _price * (quantity - FreePastries);
+      _pastryCost = _pastryCost * (quantity - FreePastries);
     }
+    
+      public int ShowPastryCost()
+      {
+        return this._pastryCost;
+      }
   
-    public string DisplayFreePastries()
-  
-    {      
+      public string DisplayFreePastries()
+      {           
       if (this.FreePastries == 0)
       {
         return "You did not qualify for any free Pastries, come back nex time!";
-
       }
       if (this.FreePastries == 1)
       {
@@ -66,14 +70,24 @@ namespace Bakery.Models
       {
         return $"Free Pastries: {this.FreePastries} Pastries!";
       }
-    }
-    public int ShowPastryCost()
-    {
-      return 1;
-    }
+      }
   }
+}      
+    
+      
+    
 
-}
+    
+    
+    
+  
+
+
+    // public static void ClearAll()
+    // {
+    //   throw new NotImplementedException();
+    // }
+
 
   
 

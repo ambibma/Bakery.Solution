@@ -66,7 +66,8 @@ namespace Bakery.Tests
   
   [TestClass]
     public class PastryTests
-    {
+    {    
+    
     [TestMethod]
       public void PastryConstructor_CreateInstanceOfPastry_Pastry()
     {
