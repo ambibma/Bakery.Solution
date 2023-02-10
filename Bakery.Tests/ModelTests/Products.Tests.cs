@@ -39,8 +39,7 @@ namespace Bakery.Tests
       int result = newBread.FreeBread;
       Assert.AreEqual(2, result);
     }
-  }
-  
+  } 
   
   [TestClass]
     public class PastryTests
@@ -58,6 +57,16 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry(quantity);
       int result = newPastry.Quantity;
       Assert.AreEqual(quantity, result);
+    }
+    [TestMethod]
+
+    public void GetFreePastries_ReturnsFreePastries_Int()
+    {
+      int quantity = 4;
+      Pastry newPastry = new Pastry(quantity);
+      int freePastry = newPastry.Quantity/4;
+      int result = newPastry.FreePastry;
+      Assert.AreEqual(1, result);
     }
     
   }

@@ -8,29 +8,20 @@ namespace Bakery.Models
     public int Quantity {get;set;}
     private int _price = 5;
     public int FreeBread = 0;
-    // private static int _BreadCounter = new int ();
 
    public Bread(int quantity)
     {
-
-      // if (quantity % 3)
       Quantity = quantity;
-      // FreeBread = quantity/3;
-      _price = _price * quantity;
-    }
-    // public int FreeBread()
-    // {
-    //   int cost = 0;
-    //   int newCost = _price - cost;
-    //   return newCost;
-    
-    // }
+      FreeBread = quantity/3;
+      _price = _price * (quantity - FreeBread);
+    } 
     
   }
   public class Pastry
   {
     public int Quantity {get; set;}
     private static int _price = 2;
+    public int FreePastry= 0;
 
     public Pastry(int quantity)
     {
@@ -40,10 +31,10 @@ namespace Bakery.Models
 
   }
 
-  public class Order
-  {
+  // public class Order
+  // {
 
-  }
+  // }
 
 
 }
