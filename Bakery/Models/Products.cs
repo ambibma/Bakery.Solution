@@ -10,7 +10,7 @@ namespace Bakery.Models
 
    public Product(int quantity)
     {
-      // Quantity = quantity;
+      Quantity = quantity;
     }
   }
   public class Pastries
