@@ -107,7 +107,15 @@ namespace Bakery.Tests
       string result = newPastry.DisplayFreePastries();
       Assert.AreEqual($"Free Pastries: {newPastry.FreePastries} Pastries!", result);
     }
-  
+    [TestMethod]
+    public void ShowPastryCost_ShowsCostOfPastryOrder_Int()
+    {
+      int quantity = 3;
+      Pastry newPastry = new Pastry(quantity);
+      int result = newPastry.ShowPastryCost();
+      Assert.AreEqual(6, result);
+    }
+
     
   }
 }

@@ -34,7 +34,7 @@ namespace Bakery.Models
     }
     public int ShowBreadCost()
     {
-      return this._price;
+      return _price;
     }
   }
   public class Pastry
@@ -67,10 +67,10 @@ namespace Bakery.Models
         return $"Free Pastries: {this.FreePastries} Pastries!";
       }
     }
-    // public int ShowPastryCost()
-    // {
-    //   return this._price;
-    // }
+    public int ShowPastryCost()
+    {
+      return 1;
+    }
   }
 
 }
