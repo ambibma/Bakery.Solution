@@ -7,26 +7,26 @@ using System;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class ProductsTests 
+  public class BreadTests 
   {
     // public void Dispose()
     // {
-    //   Product.ClearAll();
+    //   Bread.ClearAll();
     // }
     [TestMethod]
 
-    public void ProductConstructor_CreateInstanceOfProduct_Product()
+    public void BreadConstructor_CreateInstanceOfBread_Bread()
     {
-      Product newProduct = new Product(1);
-      Assert.AreEqual(typeof(Product), newProduct.GetType());
+      Bread newBread = new Bread(1);
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
     [TestMethod]
 
     public void GetQuantity_ReturnsQuantity_Int()
     {
       int quantity = 1;
-      Product newProduct = new Product(quantity);
-      int result = newProduct.Quantity;
+      Bread newBread = new Bread(quantity);
+      int result = newBread.Quantity;
       Assert.AreEqual(quantity, result);
     }
     [TestMethod]
@@ -34,9 +34,9 @@ namespace Bakery.Tests
     public void GetPrice_ReturnsPrice_Int()
     {
       int quantity = 1;
-      Product newProduct = new Product(quantity);
-      newProduct.Price = 5;
-      int result = newProduct.Price * quantity;
+      Bread newBread = new Bread(quantity);
+      newBread.Price = 5;
+      int result = newBread.Price * quantity;
       Assert.AreEqual(5, result);
     }
 
