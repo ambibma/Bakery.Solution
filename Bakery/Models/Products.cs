@@ -17,11 +17,10 @@ namespace Bakery.Models
     }
 
     public string DisplayFreeBread()
-    {
-      
+    {      
       if (this.FreeBread == 0)
       {
-        return "";
+        return "You did not qualify for any free loaves, come back nex time!";
 
       }
       if (this.FreeBread == 1)
@@ -30,7 +29,7 @@ namespace Bakery.Models
       }
       else
       {
-        return "";
+        return $"Free Bread: {this.FreeBread} Loaves!";
       }
     }
   }
