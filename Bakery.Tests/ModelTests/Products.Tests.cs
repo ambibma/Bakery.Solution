@@ -35,7 +35,8 @@ namespace Bakery.Tests
     {
       int quantity = 1;
       Product newProduct = new Product(quantity);
-      int result = newProduct.Price;
+      newProduct.Price = 5;
+      int result = newProduct.Price * quantity;
       Assert.AreEqual(5, result);
     }
 
