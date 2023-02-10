@@ -18,7 +18,7 @@ namespace Bakery.Models
 
     public string DisplayFreeBread()
     {
-        return "";
+        return $"Free Bread: {this.FreeBread}:";
       // {
       // if (this.FreeBread != 0)
       // }
