@@ -29,6 +29,15 @@ namespace Bakery.Tests
       int result = newProduct.Quantity;
       Assert.AreEqual(quantity, result);
     }
+    [TestMethod]
+
+    public void GetPrice_ReturnsPrice_Int()
+    {
+      int quantity = 1;
+      Product newProduct = new Product(quantity);
+      int result = newProduct.Price;
+      Assert.AreEqual(5, result);
+    }
 
   
   

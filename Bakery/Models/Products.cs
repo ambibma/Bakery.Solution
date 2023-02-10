@@ -6,6 +6,7 @@ namespace Bakery.Models
   public class Product
   {
     public int Quantity {get;set;}
+    public int Price {get; set;}
     // private static int _productCounter = new int ();
 
    public Product(int quantity)
