@@ -14,8 +14,9 @@ namespace Bakery.Models
       Quantity = quantity;
       Price = Price * quantity; 
     }
+    
   }
-  public class Pastries
+  public class Product : Pastries
   {
 
   }
