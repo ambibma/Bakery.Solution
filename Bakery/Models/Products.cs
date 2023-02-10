@@ -37,24 +37,38 @@ namespace Bakery.Models
   {
     public int Quantity {get; set;}
     private static int _price = 2;
-    public int FreePastry= 0;
+    public int FreePastries= 0;
 
     public Pastry(int quantity)
     {
       Quantity = quantity;
-      FreePastry = quantity/4;
-      _price = _price * (quantity - FreePastry);
+      FreePastries = quantity/4;
+      _price = _price * (quantity - FreePastries);
     }
 
     public string DisplayFreePastries()
-    {
-      return $"Free Pastries: {this.FreePastry} Pastry!";
-    }
+  
+    {      
+      if (this.FreePastries == 0)
+      {
+        return "You did not qualify for any free Pastries, come back nex time!";
 
+      }
+      if (this.FreePastries == 1)
+      {
+        return $"Free Bread: {this.FreePastries} Pastry!";
+      }
+      else
+      {
+        return "";
+      }
+    }
   }
 
-  
 }
+
+  
+
   // public class Order
   // {
 

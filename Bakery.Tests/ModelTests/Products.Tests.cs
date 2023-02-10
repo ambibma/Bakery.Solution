@@ -82,8 +82,8 @@ namespace Bakery.Tests
     {
       int quantity = 4;
       Pastry newPastry = new Pastry(quantity);
-      int freePastry = newPastry.Quantity/4;
-      int result = newPastry.FreePastry;
+      int freePastries = newPastry.Quantity/4;
+      int result = newPastry.FreePastries;
       Assert.AreEqual(1, result);
     }
     [TestMethod]
@@ -92,8 +92,17 @@ namespace Bakery.Tests
       int quantity = 4;
       Pastry newPastry = new Pastry(quantity);
       string result = newPastry.DisplayFreePastries();
-      Assert.AreEqual($"Free Pastries: {newPastry.FreePastry} Pastry!", result);
+      Assert.AreEqual($"Free Pastries: {newPastry.FreePastries} Pastry!", result);
     }
+    [TestMethod]
+    public void DisplayFreePastries_DisplaysFreePastries_StringDescription()
+    {
+      int quantity = 8;
+      Pastry newPastry = new Pastry(quantity);
+      string result = newPastry.DisplayFreePastries();
+      Assert.AreEqual($"Free Pastries: {newPastry.FreePastries} Pastries!", result);
+    }
+
     
   }
 }
