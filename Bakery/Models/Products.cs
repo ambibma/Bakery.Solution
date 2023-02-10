@@ -26,7 +26,8 @@ namespace Bakery.Models
     public Pastry(int quantity)
     {
       Quantity = quantity;
-      _price = _price * quantity;
+      FreePastry = quantity/3;
+      _price = _price * (quantity - FreePastry);
     }
 
   }
