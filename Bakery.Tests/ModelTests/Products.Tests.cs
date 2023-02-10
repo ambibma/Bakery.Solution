@@ -15,7 +15,7 @@ namespace Bakery.Tests
     // }
     [TestMethod]
 
-    public void BreadConstructor_CreateInstanceOfBread_Bread()
+    public void BreadConstructor_CreateInstanceOfBread_getBread()
     {
       Bread newBread = new Bread(1);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
@@ -29,7 +29,18 @@ namespace Bakery.Tests
       int result = newBread.Quantity;
       Assert.AreEqual(quantity, result);
     }
+    [TestMethod]
+
+    public void GetFreeBread_ReturnsFreeBread_Int()
+    {
+      int quantity = 6;
+      Bread newBread = new Bread(quantity);
+      int freeBread = newBread.Quantity/3;
+      int result = newBread.FreeBread;
+      Assert.AreEqual(2, result);
+    }
   }
+  
   
   [TestClass]
     public class PastryTests
