@@ -17,18 +17,18 @@ namespace Bakery.Tests
 
     public void ProductConstructor_CreateInstanceOfProduct_Product()
     {
-      Product newProduct = new Product();
+      Product newProduct = new Product(1);
       Assert.AreEqual(typeof(Product), newProduct.GetType());
     }
-    // [TestMethod]
+    [TestMethod]
 
-    // public void GetQuantity_ReturnsQuantity_Int()
-    // {
-    //   int quantity = 1;
-    //   Product newProduct = new Product(quantity);
-    //   int result = newProduct.Quantity;
-    //   Assert.AreEqual(quantity, result);
-    // }
+    public void GetQuantity_ReturnsQuantity_Int()
+    {
+      int quantity = 1;
+      Product newProduct = new Product(quantity);
+      int result = newProduct.Quantity;
+      Assert.AreEqual(quantity, result);
+    }
 
   
   

@@ -5,13 +5,13 @@ namespace Bakery.Models
 {
   public class Product
   {
-    // public int Quantity {get;set;}
+    public int Quantity {get;set;}
     // private static int _productCounter = new int ();
 
-  //  public Product(int quantity)
-  //   {
-  //     Quantity = quantity;
-  //   }
+   public Product(int quantity)
+    {
+      // Quantity = quantity;
+    }
   }
   public class Pastries
   {
