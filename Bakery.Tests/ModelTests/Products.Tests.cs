@@ -9,10 +9,6 @@ namespace Bakery.Tests
   [TestClass]
   public class BreadTests 
   {
-    // public void Dispose()
-    // {
-    //   Bread.ClearAll();
-    // }
     [TestMethod]
 
     public void BreadConstructor_CreateInstanceOfBread_getBread()
@@ -56,6 +52,15 @@ namespace Bakery.Tests
       Bread newBread = new Bread(quantity);
       string result = newBread.DisplayFreeBread();
       Assert.AreEqual($"Free Bread: {newBread.FreeBread} Loaves!", result);
+    }
+    [TestMethod]
+
+    public void ShowBreadCost_ShowsCostOfBreadOrder_Int()
+    {
+      int quantity = 1;
+      Bread newBread = new Bread(quantity);
+      int result = newBread.ShowBreadCost();
+      Assert.AreEqual(5, result);
     }
   } 
   
