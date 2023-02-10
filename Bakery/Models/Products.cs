@@ -56,11 +56,11 @@ namespace Bakery.Models
       }
       if (this.FreePastries == 1)
       {
-        return $"Free Bread: {this.FreePastries} Pastry!";
+        return $"Free Pastries: {this.FreePastries} Pastry!";
       }
       else
       {
-        return "";
+        return $"Free Pastries: {this.FreePastries} Pastries!";
       }
     }
   }
