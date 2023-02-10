@@ -39,6 +39,15 @@ namespace Bakery.Tests
       int result = newBread.FreeBread;
       Assert.AreEqual(2, result);
     }
+    [TestMethod]
+
+    public void DisplayFreeBread_ShowsFreeBread_StringDescription()
+    {
+      int quantity = 3;
+      Bread newBread = new Bread(quantity);
+      string result = newBread.DisplayFreeBread();
+      Assert.AreEqual($"Free Bread: {newBread.FreeBread}:", result);
+    }
   } 
   
   [TestClass]

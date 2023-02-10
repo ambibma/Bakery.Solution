@@ -14,7 +14,22 @@ namespace Bakery.Models
       Quantity = quantity;
       FreeBread = quantity/3;
       _price = _price * (quantity - FreeBread);
-    } 
+    }
+
+    public string DisplayFreeBread()
+    {
+        return "";
+      // {
+      // if (this.FreeBread != 0)
+      // }
+      // else
+      // {
+      //   return "";
+      // }
+      // else (this.FreeBread)
+    }
+
+  
     
   }
   public class Pastry
@@ -26,7 +41,7 @@ namespace Bakery.Models
     public Pastry(int quantity)
     {
       Quantity = quantity;
-      FreePastry = quantity/3;
+      FreePastry = quantity/4;
       _price = _price * (quantity - FreePastry);
     }
 
