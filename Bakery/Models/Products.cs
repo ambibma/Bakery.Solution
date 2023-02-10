@@ -54,7 +54,7 @@ namespace Bakery.Models
       {           
       if (this.FreePastries == 0)
       {
-        return "You did not qualify for any free Pastries, come back nex time!";
+        return "You did not qualify for any free Pastries, come back next time!";
       }
       if (this.FreePastries == 1)
       {

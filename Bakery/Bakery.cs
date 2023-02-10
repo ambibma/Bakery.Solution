@@ -7,7 +7,12 @@ namespace Bakery {
   {
     public static void Main()
     {
-      Console.WriteLine("Welcome to Pierre's Bakery! Home of the Pierre's Poppin' Pastry! TODAY'S SALE: Buy 2 Loaves of Bread and the 3rd is Free & Buy 4 Poppin' Pastries get one Free!");
+      Console.WriteLine("Welcome to Pierre's Bakery! Home of the Pierre's Poppin' Pastry!");
+      Console.WriteLine("Bread is $5.00 Each"); 
+      Console.WriteLine("Poppin' Pastries are: $2.00"); 
+      Console.WriteLine("TODAY'S SALE: Buy 2 Loaves of Bread and the 3rd is Free & Buy 3 Poppin' Pastries get one Free!");
+      Console.WriteLine("Note: If you Buy 2 Loaves or 3 Pastries add 1 the free one to your order!, otherwise we just might forget");
+
 
       while (true)
       {
