@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-// using System.Linq;
 
 namespace Bakery.Models
 {
@@ -16,7 +13,6 @@ namespace Bakery.Models
       FreeBread = quantity/3;
       _price = _price * (quantity - FreeBread);
     }
-
     public string DisplayFreeBread()
     {      
       if (this.FreeBread == 0)
@@ -49,13 +45,11 @@ namespace Bakery.Models
       Quantity = quantity;
       FreePastries = quantity/4;
       _pastryCost = _pastryCost * (quantity - FreePastries);
-    }
-    
+    }    
       public int ShowPastryCost()
       {
         return this._pastryCost;
-      }
-  
+      }  
       public string DisplayFreePastries()
       {           
       if (this.FreePastries == 0)
@@ -73,26 +67,3 @@ namespace Bakery.Models
       }
   }
 }      
-    
-      
-    
-
-    
-    
-    
-  
-
-
-    // public static void ClearAll()
-    // {
-    //   throw new NotImplementedException();
-    // }
-
-
-  
-
-  // public class Order
-  // {
-
-  // }
-
