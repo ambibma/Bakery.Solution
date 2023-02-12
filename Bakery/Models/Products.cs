@@ -11,7 +11,7 @@ namespace Bakery.Models
     {
       Quantity = quantity;
       FreeBread = quantity/3;
-      _price = _price * (quantity - FreeBread);
+      
     }
     public string DisplayFreeBread()
     {      
@@ -29,9 +29,10 @@ namespace Bakery.Models
         return $"Free Bread: {this.FreeBread} Loaves!";
       }
     }
-    public int ShowBreadCost()
-    {
-      return this._price;
+    public int GetBreadCost()
+    {      
+      _price = this._price * (Quantity - FreeBread);
+      return _price;
     }
   }
   public class Pastry

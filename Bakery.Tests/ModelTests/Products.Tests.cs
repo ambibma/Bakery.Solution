@@ -19,6 +19,7 @@ namespace Bakery.Tests
     {
       int quantity = 1;
       Bread newBread = new Bread(quantity);
+      
       int result = newBread.Quantity;
       Assert.AreEqual(quantity, result);
     }
@@ -52,11 +53,11 @@ namespace Bakery.Tests
     }
     [TestMethod]
 
-    public void ShowBreadCost_ShowsCostOfBreadOrder_Int()
+    public void GetBreadCost_ShowsCostOfBreadOrder_Int()
     {
       int quantity = 1;
       Bread newBread = new Bread(quantity);
-      int result = newBread.ShowBreadCost();
+      int result = newBread.GetBreadCost();
       Assert.AreEqual(5, result);
     }
   } 
