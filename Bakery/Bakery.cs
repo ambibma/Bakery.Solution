@@ -36,7 +36,8 @@ namespace Bakery {
         else
         {
           Console.WriteLine("Okay then have a nice day!");
-        }
+          System.Environment.Exit(0);
+          }
       }
     }
   }
