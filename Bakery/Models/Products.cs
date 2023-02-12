@@ -45,12 +45,12 @@ namespace Bakery.Models
     {
       Quantity = quantity;
       FreePastries = quantity/4;
-      _pastryCost = _pastryCost * (quantity - FreePastries);
     }    
-      public int ShowPastryCost()
-      {
-        return this._pastryCost;
-      }  
+      public int GetPastryCost()
+    {      
+      _pastryCost = this._pastryCost * (Quantity - FreePastries);
+      return _pastryCost;
+    }
       public string DisplayFreePastries()
       {           
       if (this.FreePastries == 0)

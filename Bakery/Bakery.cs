@@ -29,8 +29,8 @@ namespace Bakery {
           int userPastryQuantity = int.Parse(Console.ReadLine());
           Pastry newPastry = new Pastry(userPastryQuantity);
           Console.WriteLine(newPastry.DisplayFreePastries());
-          Console.WriteLine("Your Pastry Order cost is " + "$"+newPastry.ShowPastryCost()+".00");
-          Console.WriteLine("Your total Cost comes out to: " +"$"+(newBread.GetBreadCost()+newPastry.ShowPastryCost())+ ".00");
+          Console.WriteLine("Your Pastry Order cost is " + "$"+newPastry.GetPastryCost()+".00");
+          Console.WriteLine("Your total Cost comes out to: " +"$"+(newBread.GetBreadCost()+newPastry.GetPastryCost())+ ".00");
           Console.WriteLine("Thank you for stopping at Pierre's Bakery have a nice day!");
         }
         else
