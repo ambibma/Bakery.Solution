@@ -9,8 +9,7 @@ namespace Bakery.Models
     public Bread(int quantity)
     {
       Quantity = quantity;
-      FreeBread = quantity/3;
-      
+      FreeBread = quantity/3;      
     }
     public string DisplayFreeBread()
     {      
@@ -30,8 +29,7 @@ namespace Bakery.Models
     }
     public int GetBreadCost()
     {      
-      _price = this._price * (Quantity - FreeBread);
-      return _price;
+     return this._price * (Quantity - FreeBread);      
     }
   }
   public class Pastry
@@ -46,10 +44,9 @@ namespace Bakery.Models
       FreePastries = quantity/4;
     }    
       public int GetPastryCost()
-    {      
-      _pastryCost = this._pastryCost * (Quantity - FreePastries);
-      return _pastryCost;
-    }
+      {      
+      return this._pastryCost * (Quantity - FreePastries);
+      }
       public string DisplayFreePastries()
       {           
       if (this.FreePastries == 0)
@@ -65,5 +62,6 @@ namespace Bakery.Models
         return $"Free Pastries: {this.FreePastries} Pastries!";
       }
       }
-  }
-}      
+    }
+  }  
+   
